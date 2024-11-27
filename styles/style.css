@@ -511,6 +511,11 @@ html:has(.toggle__checkbox:checked) {
     width: 100%;
     margin-top: 10rem;
   }
+  .projectone__img,
+  .projecttwo__img,
+  .media__video {
+    border-radius: 5rem;
+  }
   .header {
     padding: 0;
   }
