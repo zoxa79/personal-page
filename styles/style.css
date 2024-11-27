@@ -312,12 +312,14 @@ body,
 }
 .bio__pic {
   width: 42.7rem;
+  
 }
 
 .skills__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 5rem;
+  border-radius: 5rem
 }
 
 .skills__item {
