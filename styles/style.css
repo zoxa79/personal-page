@@ -312,6 +312,7 @@ body,
 }
 .bio__pic {
   width: 42.7rem;
+  border-radius: 5rem;
   
 }
 
