@@ -509,6 +509,7 @@ html:has(.toggle__checkbox:checked) {
 @media (max-width: 500px) {
   .bio__pic {
     width: 100%;
+    margin-top: 10rem;
   }
   .header {
     padding: 0;
