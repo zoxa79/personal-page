@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ziad Ibrahem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.scss" />
+  </head>
+  <body>
+    <div class="container">
+      <video class="video-loop" autoplay loop muted>
+        <source src="./video-loop.mp4" type="video/mp4" />
+      </video>
+      <header class="header">
+        <label class="burger-menu" for="menu">
+          <div class="div burger-menu__bar"></div>
+          <div class="div burger-menu__bar"></div>
+          <div class="div burger-menu__bar"></div>
+        </label>
+        <input id="menu" type="checkbox" class="burger-menu__checkbox" >
+
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li>
+              <a href="#bio" class="navigation__link navigation__bio">Bio</a>
+            </li>
+            <li>
+              <a href="#skills" class="navigation__link navigation__skills"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a href="#media" class="navigation__link navigation__media"
+                >Media</a
+              >
+            </li>
+            <li>
+              <a href="#projects" class="navigation__link navigation__projects"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a href="#clients" class="navigation__link navigation__clients"
+                >My Clients</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="navigation__link navigation__contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="toggle">
+          <h3 class="toggle__title">Switch Theme</h3>
+          <input
+            type="checkbox"
+            name="toggle__checkbox"
+            id="toggle"
+            class="toggle__checkbox"
+          />
+          <label for="toggle" class="toggle__label"></label>
+        </div>
+      </header>
+
+      <section id="bio" class="bio section">
+        <div class="bio__data">
+          <h1 class="bio__heading">
+            Hi There, I'M A Software Engineering student
+          </h1>
+          <p class="bio__objective">
+            My name is <span class="bio__name">Ziad Elrefaey</span>, I Faculty
+            of specific Education Ain shams University, And I hope to be A Rich
+            and Successful man
+          </p>
+          <!-- <a href="https://www.almdrasa.com/" class="bio__almadrasa">Almdrasa</a> -->
+          <a href="#contact" class="bio__links say-hi-link">Say Hi</a>
+          <a
+            href="./mohamedAbusreaResume.pdf"
+            target="_blank"
+            class="bio__links find-out-link"
+            >Download CV <span class="bio__arrow">⇩</span></a
+          >
+        </div>
+        <div class="bio__picture-content">
+          <img class="bio__pic" src="./me1.jpg" alt="image of ziad elrefaey" />
+          <!--Use ./ to refer current directory. use ../ to refer from the parent directory.-->
+        </div>
+      </section>
+
+      <section id="skills" class="skills section section--with-bg">
+        <h2 class="h2-heading">SKILLS</h2>
+        <ul class="skills__list">
+          <li class="skills__item">
+            <h2 class="skills__title">Html</h2>
+            <span class="skills__years">2 years</span>
+          </li>
+          <li class="skills__item">
+            <h2 class="skills__title">Css</h2>
+            <span class="skills__years">6 months</span>
+          </li>
+          <li class="skills__item">
+            <h2 class="skills__title">Javascript</h2>
+            <span class="skills__years">0 years</span>
+          </li>
+          <li class="skills__item">
+            <h2 class="skills__title">React</h2>
+            <span class="skills__years">0 years</span>
+          </li>
+          <li class="skills__item">
+            <h2 class="skills__title">Redux</h2>
+            <span class="skills__years">0 years</span>
+          </li>
+          <li class="skills__item">
+            <h2 class="skills__title">React testing library</h2>
+            <span class="skills__years">0 year</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="media" class="media section">
+        <video class="media__video" poster="./thumbnail.jpg" controls>
+          <source src="./video.mp4" type="video/mp4" />
+        </video>
+      </section>
+
+      <section id="projects" class="projects section">
+        <h2 class="projects__heading h2-heading">
+          MY FEATURED <br />
+          PROJECTS
+        </h2>
+        <img
+          class="projectone__img projects__img"
+          src="./project-1.jpg"
+          alt="Quran Tab Extension"
+        />
+        <div class="projects__data">
+          <h3 class="projectone__header h3-heading">
+            Quran Tab <br />
+            Extension
+          </h3>
+          <p class="project__details">
+            Quran Tab is an Islamic new tab page that will keep you inspired by
+            a verse from the Quran every time you open a new tab that helps your
+            achieve your "Khatma" and keeps you connected with the words of
+            Allah.
+          </p>
+          <a
+            href="https://chromewebstore.google.com/detail/quran-tab/afaihcdgkjebgabomemccdneglknjkdd?pli=1"
+            target="_blank"
+            class="projects__link"
+            >Chrome Link</a
+          >
+          <span>-</span>
+          <a
+            href="https://microsoftedge.microsoft.com/addons/detail/quran-tab/hnfepfakgcalolgicjdfmaaellnondji"
+            target="_blank"
+            class="projects__link"
+            >EdgeLink</a
+          >
+        </div>
+
+        <div class="projects__data">
+          <h3 class="projecttwo__header h3-heading">
+            Quran stations <br />
+            Extension
+          </h3>
+          <p class="project__details">
+            Small extension that gives you access to over 100 stations to help
+            you listen to the Quran from your favorite reciters easily
+            Quran-Station has over 100 stations to help you listen to the Quran
+            from your favorite reciters in a quick and easy way.
+          </p>
+          <a
+            href="https://chromewebstore.google.com/detail/quran-station/angdimijeelplemmdnedhnjidadfphom"
+            target="_blank"
+            class="projects__link"
+            >Chrome Link</a
+          >
+          <span>-</span>
+          <a
+            href="https://addons.mozilla.org/en-US/firefox/addon/quran-station/"
+            target="_blank"
+            class="projects__link"
+            >Firefox Link</a
+          >
+          <span>-</span>
+          <a
+            href="https://microsoftedge.microsoft.com/addons/detail/quran-station/ebhikjobpdpkkaimiebhdlmfhogobbaf"
+            target="_blank"
+            class="projects__link"
+            >EdgeLink</a
+          >
+        </div>
+        <img
+          class="projecttwo__img projects__img"
+          src="./project-2.jpg"
+          alt="Quran stations Extension"
+        />
+      </section>
+
+      <section id="clients" class="cients section section--with-bg">
+        <h2 class="h2-heading">
+          What My <br />
+          Clients Says.
+        </h2>
+        <div class="clients__opinions">
+          <div class="clients__wrapper">
+            <p class="clients__opinion">
+              Ziad has the advantageous ability to understand a problem and
+              implement code to a high standard within the deadline. Each
+              project we have worked on, I know I can completely trust Ziad to
+              own his tasks and complete what is needed when asked of him.
+            </p>
+            <p class="clients__opinion">
+              Ziad will patiently listen to you and give you his own Ideas as
+              well, and in the end, he comes up with something completely
+              different from what you're expecting, but the good news is, you'll
+              always love it.
+            </p>
+            <p class="clients__opinion">
+              I had a chance to work closely with Mohamed as a direct manager
+              from hist first day at DeliveryHero until my last day there
+              (6+months). Ziad's biggest strengths that I admire are taking
+              initiatives on personal and team level, and driving them.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section">
+        <div>
+          <p class="contact__description">
+            Feel free to reach out to me any time. If I can help you I will.
+          </p>
+          <a class="contact__email" href="mailto:ziadibrahime83@gmail.com"
+            >ziadibrahime83@gmail.com</a
+          >
+          <div class="contact__socials">
+            <a
+              href="https://www.facebook.com/share/1ShNdkbbZq/"
+              class="contact__social"
+              target="_blank"
+            >
+              <img src="./brand/facebook.svg" alt="Icon of facebook" />
+            </a>
+            <a
+              href="https://github.com/zoxa79?fbclid=IwY2xjawGhIz5leHRuA2FlbQIxMAABHersPs17wuKF4dubMIRWTToXTlSv9jb-XznYMKYRDV1ux7bINGYoQUu3Nw_aem_dn7dKi_omX54Rk7BtIubTA"
+              class="contact__social"
+              target="_blank"
+            >
+              <img src="./brand/github.svg" alt="Icon of github" />
+            </a>
+            <a
+              href="https://www.instagram.com/z.ox.a_im/profilecard/?igsh=MWhidHJvdWJob2h4bg=="
+              class="contact__social"
+              target="_blank"
+            >
+              <img src="./brand/instagram.svg" alt="Icon of instagram" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/%D8%B2%D9%8A%D8%A7%D8%AF-%D8%A5%D8%A8%D8%B1%D8%A7%D9%87%D9%8A%D9%85-4b2485338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              class="contact__social"
+              target="_blank"
+            >
+              <img src="./brand/LinkedIn.svg" alt="Icon of LinkedIn" />
+            </a>
+            <a
+              href="https://x.com/z_m_29?t=tQqgHzpeB-F1B0hYz5O7vw&s=09"
+              class="contact__social"
+              target="_blank"
+            >
+              <img src="./brand/twitter.svg" alt="Icon of twitter" />
+            </a>
+            <!-- <a href="" class="contact__social">
+              <img src="./brand/youtube.svg" alt="Icon of youtube" />
+            </a> -->
+          </div>
+        </div>
+
+        <div class="contact__formContent">
+          <h2 class="projects__heading h2-heading">
+            Let's Work <br />
+            Together!
+          </h2>
+          <form action="results.html">
+            <div class="contact__inputs">
+              <input
+                class="contact__input"
+                type="text"
+                placeholder="Full Name"
+                name="Full Name"
+                required
+              />
+              <input
+                class="contact__input phone"
+                type="tel"
+                placeholder="Phone Number"
+                name="Telephone"
+                pattern="[0-9]{3}[0-9]{4}[0-9]{4}"
+                required
+              />
+            </div>
+            <textarea
+              class="contact__input contact__textarea"
+              name="description"
+              id="description"
+              rows="1"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <input class="contact__button" type="submit" value="Send Message" />
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer">&copy; 2024 by Ziad Elrefaey</footer>
+    </div>
+  </body>
+</html>

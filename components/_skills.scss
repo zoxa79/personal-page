@@ -1,0 +1,32 @@
+.h2__heading {
+  font-size: var(--font-size-65);
+  font-weight: var(--font-weight-bold);
+  grid-column: 1/-1; /* very important*/
+  margin-bottom: 8.7rem;
+}
+
+.skills__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 5rem;
+}
+
+.skills__item {
+  transition: var(--transition-timing);
+  user-select: none; /*wow!*/
+}
+
+.skills__title {
+  font-size: var(--font-size-38);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.skills__years {
+  display: inline-block;
+  font-size: var(--font-size-20);
+  margin-top: 1rem;
+}
+
+.text.item:hover {
+  text-shadow: 0 0 2px var(--color-green);
+}
