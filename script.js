@@ -1,4 +1,3 @@
-// Wait for the DOM to be fully loaded before running scripts
 document.addEventListener("DOMContentLoaded", () => {
   /**
    * Burger Menu Toggle
@@ -72,24 +71,17 @@ document.addEventListener("DOMContentLoaded", () => {
 const sections = document.querySelectorAll("section[id]");
 const navLinks = document.querySelectorAll(".navigation__link");
 
-// (Assuming you have these defined for the mobile menu part)
-// const navigationMenu = document.querySelector(".navigation__menu");
-// const burgerButton = document.querySelector(".burger-button");
-
 // --- 2. Define the Observer Callback Function ---
-// This function runs WHEN a section's visibility changes
 const observerCallback = (entries, observer) => {
   entries.forEach((entry) => {
     // Check if the section is intersecting (at least 60% visible)
     if (entry.isIntersecting) {
       const visibleSectionId = entry.target.id;
 
-      // Remove 'active' class from ALL nav links
       navLinks.forEach((link) => {
         link.classList.remove("navigation__link--active");
       });
 
-      // Find the ONE nav link that matches the visible section
       const activeLink = document.querySelector(
         `.navigation__link[href="#${visibleSectionId}"]`
       );
@@ -103,7 +95,6 @@ const observerCallback = (entries, observer) => {
 };
 
 // --- 3. Setup and Run the Observer (Scrollspy) ---
-// Only run this if we found sections and links
 if (sections.length > 0 && navLinks.length > 0) {
   // A. Define the options
   const observerOptions = {
@@ -125,7 +116,6 @@ if (sections.length > 0 && navLinks.length > 0) {
 }
 
 // --- 4. Setup Mobile Menu Clicks ---
-// (This part was correct, just assuming 'navigationMenu' and 'burgerButton' exist)
 if (navigationMenu && burgerButton) {
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
