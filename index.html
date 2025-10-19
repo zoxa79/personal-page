@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-mF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ziad Ibrahem</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -10,22 +10,27 @@
       href="https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="container">
-      <video class="video-loop" autoplay loop muted>
+      <video class="video-loop" autoplay loop muted playsinline>
         <source src="./video-loop.mp4" type="video/mp4" />
       </video>
       <header class="header">
-        <label class="burger-menu" for="menu">
+        <button
+          class="burger-menu"
+          id="burger-menu-button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="navigation-menu"
+        >
           <div class="div burger-menu__bar"></div>
           <div class="div burger-menu__bar"></div>
           <div class="div burger-menu__bar"></div>
-        </label>
-        <input id="menu" type="checkbox" class="burger-menu__checkbox" >
+        </button>
 
-        <nav class="navigation">
+        <nav class="navigation" id="navigation-menu">
           <ul class="navigation__list">
             <li>
               <a href="#bio" class="navigation__link navigation__bio">Bio</a>
@@ -33,11 +38,6 @@
             <li>
               <a href="#skills" class="navigation__link navigation__skills"
                 >Skills</a
-              >
-            </li>
-            <li>
-              <a href="#media" class="navigation__link navigation__media"
-                >Media</a
               >
             </li>
             <li>
@@ -59,13 +59,15 @@
         </nav>
         <div class="toggle">
           <h3 class="toggle__title">Switch Theme</h3>
-          <input
-            type="checkbox"
-            name="toggle__checkbox"
-            id="toggle"
-            class="toggle__checkbox"
-          />
-          <label for="toggle" class="toggle__label"></label>
+          <button
+            class="toggle__button"
+            id="theme-toggle"
+            role="switch"
+            aria-checked="false"
+            aria-label="Switch theme"
+          >
+            <span class="toggle__slider"></span>
+          </button>
         </div>
       </header>
 
@@ -79,18 +81,17 @@
             of specific Education Ain shams University, And I hope to be A Rich
             and Successful man
           </p>
-          <!-- <a href="https://www.almdrasa.com/" class="bio__almadrasa">Almdrasa</a> -->
           <a href="#contact" class="bio__links say-hi-link">Say Hi</a>
-          <a
-            href="./mohamedAbusreaResume.pdf"
-            target="_blank"
-            class="bio__links find-out-link"
+          <a id="cv" href="#" target="_blank" class="bio__links find-out-link"
             >Download CV <span class="bio__arrow">⇩</span></a
           >
         </div>
         <div class="bio__picture-content">
-          <img class="bio__pic" src="./personal-pic.jpg" alt="image of ziad elrefaey" />
-          <!--Use ./ to refer current directory. use ../ to refer from the parent directory.-->
+          <img
+            class="bio__pic"
+            src="./personal-pic.jpg"
+            alt="image of ziad elrefaey"
+          />
         </div>
       </section>
 
@@ -98,36 +99,30 @@
         <h2 class="h2-heading">SKILLS</h2>
         <ul class="skills__list">
           <li class="skills__item">
-            <h2 class="skills__title">Html</h2>
+            <h3 class="skills__title">Html</h3>
             <span class="skills__years">2 years</span>
           </li>
           <li class="skills__item">
-            <h2 class="skills__title">Css</h2>
-            <span class="skills__years">6 months</span>
+            <h3 class="skills__title">Css</h3>
+            <span class="skills__years">1 Year</span>
           </li>
           <li class="skills__item">
-            <h2 class="skills__title">Javascript</h2>
+            <h3 class="skills__title" data-name="Javascript">Javascript</h3>
+            <span class="skills__years">6 Months</span>
+          </li>
+          <li class="skills__item">
+            <h3 class="skills__title">React</h3>
             <span class="skills__years">0 years</span>
           </li>
-          <li class="skills__item">
-            <h2 class="skills__title">React</h2>
+          <li id="redux" class="skills__item" data-name="redux">
+            <h3 id="redux__title" class="skills__title">Redux</h3>
             <span class="skills__years">0 years</span>
           </li>
-          <li class="skills__item">
-            <h2 class="skills__title">Redux</h2>
-            <span class="skills__years">0 years</span>
-          </li>
-          <li class="skills__item">
-            <h2 class="skills__title">React testing library</h2>
+          <li class="skills__item" data-name="rtl">
+            <h3 id="rtl__title" class="skills__title">React testing library</h3>
             <span class="skills__years">0 year</span>
           </li>
         </ul>
-      </section>
-
-      <section id="media" class="media section">
-        <video class="media__video" poster="./thumbnail.jpg" controls>
-          <source src="./video.mp4" type="video/mp4" />
-        </video>
       </section>
 
       <section id="projects" class="projects section">
@@ -225,10 +220,10 @@
               always love it.
             </p>
             <p class="clients__opinion">
-              I had a chance to work closely with Ziad as a direct manager
-              from hist first day at DeliveryHero until my last day there
-              (6+months). Ziad's biggest strengths that I admire are taking
-              initiatives on personal and team level, and driving them.
+              I had a chance to work closely with Ziad as a direct manager from
+              hist first day at DeliveryHero until my last day there (6+months).
+              Ziad's biggest strengths that I admire are taking initiatives on
+              personal and team level, and driving them.
             </p>
           </div>
         </div>
@@ -278,9 +273,6 @@
             >
               <img src="./brand/twitter.svg" alt="Icon of twitter" />
             </a>
-            <!-- <a href="" class="contact__social">
-              <img src="./brand/youtube.svg" alt="Icon of youtube" />
-            </a> -->
           </div>
         </div>
 
@@ -289,7 +281,7 @@
             Let's Work <br />
             Together!
           </h2>
-          <form action="results.html">
+          <form action="https://formspree.io/f/manpvkqd" method="POST">
             <div class="contact__inputs">
               <input
                 class="contact__input"
@@ -297,13 +289,16 @@
                 placeholder="Full Name"
                 name="Full Name"
                 required
+                pattern="[a-zA-Z\s\u0600-\u06FF]+"
+                title="Please enter only letters and spaces."
+                maxlength="30"
               />
               <input
                 class="contact__input phone"
                 type="tel"
-                placeholder="Phone Number"
+                placeholder="Phone Number (e.g., 01012345678)"
                 name="Telephone"
-                pattern="[0-9]{3}[0-9]{4}[0-9]{4}"
+                pattern="[0-9]{11}"
                 required
               />
             </div>
@@ -314,6 +309,7 @@
               rows="1"
               placeholder="Your Message"
               required
+              maxlength="200"
             ></textarea>
             <input class="contact__button" type="submit" value="Send Message" />
           </form>
@@ -322,5 +318,6 @@
 
       <footer class="footer">&copy; 2024 by Ziad Elrefaey</footer>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
